@@ -18,10 +18,9 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-          cache: gradle
 
       - name: Grant Permission
-        run: chmod +x gradlew
+        run: chmod +x gradlew || chmod +x app/gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build || (cd app && ./gradlew build)
