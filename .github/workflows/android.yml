@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Grant Permission
-        run: chmod +x gradlew || chmod +x app/gradlew
+        run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build || (cd app && ./gradlew build)
+        run: ./gradlew build
